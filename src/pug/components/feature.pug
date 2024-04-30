@@ -1,0 +1,13 @@
+mixin feature(data,i)
+    if (i===0)
+        li.feature.active-feature.px-2.pr-10.py-2(data-index=i class="border-r-[.3rem] grow").cursor-pointer
+            p.flex.items-center.gap-3
+                span.flex.items-center.justify-center.rounded-full.bg-light3(class='h-[3.2rem] w-[3.2rem]')
+                    i.feature-icon.p-2.text-dark1(class=data.icon)
+                span.text-base.font-medium= data.name
+    else
+        li.feature.px-2.pr-10.py-2(data-index=i class="border-r-[.3rem] grow").cursor-pointer
+            p.flex.items-center.gap-3
+                span.flex.items-center.justify-center.rounded-full.bg-light3(class='h-[3.2rem] w-[3.2rem]')
+                    i.feature-icon.p-2.text-dark1(class=data.icon)
+                span.text-base.font-medium= data.name

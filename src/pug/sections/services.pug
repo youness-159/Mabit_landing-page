@@ -1,0 +1,9 @@
+section.services.relative.overflow-hidden.bg-light2.text-center(class='pb-[10rem] pt-[9rem]')
+  img.shape-1.absolute.-bottom-5.right-32(src='imgs/shapes/shape-1.png')
+  include ../components/sectionHeader
+  +sectionHeader({title:" Designed with The applicant in mind.",paragraph:"The full monty spiffing good time no biggie cack grub fantastic."})
+  ul.services-list.mx-20.flex.justify-center.gap-10.flex-wrap(class='mt-[3rem]')
+    - const services=[ {title:"Searching",paragraph:"Mucker plastered bugger all mate morish are.",image:'imgs/icons/1.png',class:"after:bg-blue-500 after:content-['1'] service-icon-1"}, {title:"Searching",paragraph:"Mucker plastered bugger all mate morish are.",image:'imgs/icons/2.png',class:"after:bg-orange-500 after:content-['2'] service-icon-2"}, {title:"Searching",paragraph:"Mucker plastered bugger all mate morish are.",image:'imgs/icons/3.png',class:"after:bg-green-500 after:content-['3'] service-icon-3"}, {title:"Searching",paragraph:"Mucker plastered bugger all mate morish are.",image:'imgs/icons/4.png',class:"after:bg-purple-500 after:content-['4'] service-icon-4"} ]
+    include ../components/service
+    each service in services
+      +service(service)

@@ -1,0 +1,10 @@
+mixin accrodion(data)
+    details.relative.bg-white.transition.rounded-lg(class=" shrink-0 mb-[3%] duration-[3s]")
+        summary.font-semibold.cursor-pointer.text-nowrap.w-fit(class="py-[1.8rem] px-[3.5rem]")
+            span 
+                | #{data.question}
+            span.rounded-full.absolute.-right-5(class="w-[6.8rem] h-[6.8rem] ")
+                i(class="fa fa-chevron-down text-green-500")
+
+        p(class="py-[1.8rem] px-[3.5rem]")
+            | #{data.answer}

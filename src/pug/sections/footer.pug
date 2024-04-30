@@ -1,0 +1,35 @@
+footer.bg-light3(class='pt-[5rem] pb-[6rem]')
+  .mx-auto.flex.flex-wrap(class='w-[80vw] gap-[3vw]')
+    div(class="w-[32rem]")
+      span.font-semibold.text-2xl.text-green-500.tracking-wide
+        |  Mabit
+      p.text-base.text-wrap.text-dark3(class='mt-[2.5rem]') 
+        | Mabit WordPress is theme is the last theme you will ever have.
+      a.text-base.font-semibold(href='#' class='mt-[1.5rem] mb-[2.5rem]')
+        span Read More 
+        span
+          i.fa.fa-arrow-right
+      ul.flex.gap-3.mt-5
+        -const socialMedia=["fa-brands fa-facebook-f","fa-brands fa-x-twitter","fa-brands fa-pinterest-p","fa-brands fa-linkedin-in"]
+        each logo in socialMedia
+          li.bg-white.text-dark2.rounded-lg.flex.items-center.justify-center(class='w-[3.2rem] h-[3.2rem]')
+            i(class=logo)
+
+    - const fields = [{ title: "Company", subTitles: ["About Us", "Service", "Case Studies", "Blog", "Contact"] },{ title: "Support", subTitles: ["Community", "Resources", "Faqs", "Privacy Policy", "Careers"] },{ title: "Get In Touch", subTitles: ["support@Mabit.com", "+(212) 614 466 016 ", "Faqs", "442 Belle Terre St Floor 7, San Francisco, AV 4206"] }];
+    include ../components/footerField
+    each field in fields
+      +footerField(field)
+
+    .w-full.bg-gray-200.rounded-full(class="h-[1px]")
+
+    div.flex.flex-wrap.items-center.justify-between.w-full.gap-10
+      .buttons.flex.text-nowrap(class=' max-[1017px]:justify-center gap-[1vw] max-[1070px]:gap-[2vw]')
+        button.space-x-2.rounded-lg.border-transparent.bg-dark2.text-light1.transition(class=' border-[.2rem] px-[1.8rem] py-[.5rem] duration-[.2s] hover:border-[.2rem] hover:border-dark2 hover:bg-white hover:text-dark2')
+          a(href="#")
+            i.fa-brands.fa-apple.mr-2(class='hover:text-dark2')
+            span.text-base Download for IOS
+        button.space-x-2.text-green-600.border-green-600.rounded-lg.transition(class='px-[1.8rem] border-[.2rem] py-[.5rem] duration-[.2s] hover:border-transparent hover:bg-green-600 hover:text-white  ')
+          a(href="#")
+            i.fa-brands.fa-android.mr-2
+            span Download for Android
+      p.text-gray-600 Copyright © 2024 Mabit - Youness El Mesbahy. All rights reserved.

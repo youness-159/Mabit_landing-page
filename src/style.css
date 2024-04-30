@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* color: #44010f33; */
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  /* background-color: #; */
+  @apply bg-white-cold;
+}
+
+body > * {
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* 
+#b34f4a
+
+
+
+*/
+
+.service-icon-1 {
+  background: linear-gradient(135deg, #6ea2c2 0%, #3b6f8f 100%);
+}
+.service-icon-2 {
+  background: linear-gradient(135deg, #c2726e 0%, #8f3f3b 100%);
+}
+
+br {
+  /* color: #4a8bb3; */
+  color: #b14ab3;
+}
+
+.service-icon-3 {
+  background: linear-gradient(135deg, #6ebfc2 0%, #3b8c8f 100%);
+}
+.service-icon-4 {
+  background: linear-gradient(135deg, #c16ec2 0%, #8e3b8f 100%);
+}
+
+.services-list li {
+  z-index: 91;
+}
+
+.active-feature {
+  @apply text-green-500 border-r-[.3rem] border-green-500;
+}
+
+.active-feature span:first-child {
+  @apply bg-green-500;
+}
+.active-feature span:first-child i {
+  @apply text-white;
+}
+
+.testimonials-list {
+  transition: 0.9s;
+}
+
+.active-testimonials-circle {
+  @apply bg-white;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary {
+  list-style: none;
+}
+
+details {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+summary {
+  outline: none;
+}
+details[open] {
+  transition: 3s;
+}

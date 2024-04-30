@@ -1,0 +1,20 @@
+nav.navbar.fixed.w-full.bg-white-cold.pb-5.pt-9.text-nowrap(class="z-[9999] max-[620px]:p-10 ")
+  .flex.justify-between(class="mx-[5vw]")
+    .flex(class="gap-[4vw]")
+      span.font-semibold.text-2xl.text-green-500.tracking-wide
+        |  Mabit
+      ul.navbar-list.flex.gap-16.font-semibold.text-dark2.overflow-hidden(class="max-[968px]:hidden")
+        - const navbarItems=["Home","Mega Menu","Pages","Shop","News"]
+        each item in navbarItems
+          li.navbar-item.flex.items-center.relative
+            .navbar-item__header.flex.gap-5.items-center.cursor-pointer  
+              | #{item}
+              i.fa.fa-angle-down.ml-1
+            include ../components/droplist
+    .flex.gap-10.items-center
+      button.space-x-4
+        i.fa-regular.fa-user.text-dark5
+        span.text-dark5 Login
+      button.text-green-500.transition(class="hover:text-green-600 duration-[.3s]") Get Started
+      button.scale-125(class="h-fit min-[968px]:hidden")
+        i.fa.fa-bars

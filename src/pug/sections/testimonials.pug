@@ -1,0 +1,17 @@
+section.testimonials-section.relative(class='my-[18rem]')
+  .testimonials.relative.flex.justify-center.items-center.gap-10.text-white(class='pt-[10rem] pb-[16rem]')
+    img.absolute.-z-50(src='imgs/testimonial-bg.png' alt='' class=" w-full h-full top-1/2 -translate-y-1/2  ")
+    button.testimonials-slide-left-arrow
+      i.fa.fa-arrow-left.text-white-80.transition(class="hover:text-white duration-[.3s] scale-[2]")
+    - const testimonials=[{image:'imgs/testimonials/testimonial-user.png',username:"Jason Respons",date:"April 14, 2022",comment:"Why I say old chap that is spiffing lurgy Oxford cracking goal bleeder, bog-standard Harry brilliant mush a blinding shot starkers.",starsNumber:5},{image:'imgs/testimonials/testimonial-user.png',username:"Jason Response",date:"April 14, 2022",comment:"Why I say old chap that is spiffing lurgy Oxford cracking goal bleeder, bog-standard Harry brilliant mush a blinding shot starkers.",starsNumber:5},{image:'imgs/testimonials/testimonial-user.png',username:"Jason Respons",date:"April 14, 2022",comment:"Why I say old chap that is spiffing lurgy Oxford cracking goal bleeder, bog-standard Harry brilliant mush a blinding shot starkers.",starsNumber:5}]
+    div.relative
+      div(class='w-[50vw] max-[640px]:w-[70vw]').overflow-clip
+        ul.testimonials-list.flex.w-full
+          include ../components/testimonial
+          each testimonial in testimonials
+            +testimonial(testimonial)
+        .circles.flex.gap-3.absolute.bottom-0(class='left-1/2 -translate-x-1/2 translate-y-[200%]')
+          each _ in testimonials
+            .circle.w-4.h-4.rounded-full.bg-white-80
+    button.testimonials-slide-right-arrow
+      i.fa.fa-arrow-right.text-white-80.transition(class="hover:text-white duration-[.3s] scale-[2]")

@@ -1,0 +1,30 @@
+mixin featureInfo(data,i)
+  if (i===0)
+    .feature-info.flex.items-center(class='gap-[7vw] max-[727px]:flex-col ' data-index=i )
+      div
+        img(src=data.image class='w-[41rem]  min-w-[32rem] translate-x-[10%]' alt='')
+      .feature-text
+        p.text-sm.font-semibold.text-green-500 Custom Reacyions
+        h2.text-wrap.text-5xl.font-black(class='mb-[2.2rem] mt-[1rem] leading-[6rem]')
+          | #{data.title}
+        h3.text-wrap.text-lg.text-dark5
+          | #{data.paragraph}
+        .buttons(class='mt-[4rem]')
+          button
+            span.rounded-md.border-transparent.bg-green-500.px-5.py-3.text-base.font-medium.text-light1.transition(class='duration-[.3s] hover:border-green-500 hover:bg-white hover:text-green-500 border-[1px]') 
+              | Learn More
+  else            
+    .feature-info.flex.items-center.hidden(class='gap-[7vw] max-[727px]:flex-col' data-index=i)
+      div
+        img(src=data.image class='w-[41rem] min-w-[32rem] translate-x-[10%]' alt='')
+      .feature-text
+        p.text-sm.font-semibold.text-green-500 Custom Reacyions
+        h2.text-wrap.text-5xl.font-black(class='mb-[2.2rem] mt-[1rem] leading-[6rem]')
+          | #{data.title}
+        h3.text-wrap.text-lg.text-dark5
+          | #{data.paragraph}
+        .buttons(class='mt-[4rem]')
+          button
+            span.rounded-md.border-transparent.bg-green-500.px-5.py-3.text-base.font-medium.text-light1.transition(class='duration-[.3s] hover:border-green-500 hover:bg-white hover:text-green-500 border-[1px]') 
+              | Learn More
+
