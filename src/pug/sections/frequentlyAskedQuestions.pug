@@ -1,8 +1,8 @@
-section.relative.bg-light3.z-20(class='py-[10rem] ')
-  img.absolute.bottom-0.right-14.z-10(src="imgs/shapes/faq-shape.png")
+section.faq.relative.bg-light3(class='py-[10rem] ')
+  img.absolute.bottom-0.right-14(src="imgs/shapes/faq-shape.png" style="z-index:9;")
   include ../components/sectionHeader
   +sectionHeader({title:"Frequently asked questions",paragraph:"Different layouts and styles for team sections."})
-  div.mx-auto.flex.items-baseline.justify-center.mt-16(class="w-[70vw] max-[1017px]:w-[90vw] gap-[5%] max-[1017px]:gap-0 max-[1017px]:flex-wrap ")
+  div.mx-auto.flex.items-baseline.justify-center.mt-16(class=" w-[70vw] max-[1017px]:w-[90vw] gap-[5%] max-[1017px]:gap-0 max-[1017px]:flex-wrap ")
     - const accrodions=[ {question:"Where do I usually find FAQs in a page?",answer:"Naff Oxford vagabond in my flat chinwag blatant grub tomfoolery that I bits and bobs up the duff cras boot bevvy no biggie."},    {question:"Where do I usually find FAQs in a page?",answer:"Naff Oxford vagabond in my flat chinwag blatant grub tomfoolery that I bits and bobs up the duff cras boot bevvy no biggie."},    {question:"Where do I usually find FAQs in a page?",answer:"Naff Oxford vagabond in my flat chinwag blatant grub tomfoolery that I bits and bobs up the duff cras boot bevvy no biggie."},    {question:"Where do I usually find FAQs in a page?",answer:"Naff Oxford vagabond in my flat chinwag blatant grub tomfoolery that I bits and bobs up the duff cras boot bevvy no biggie."}]
     include ../components/accrodion
     div(class="w-[47%] max-[1017px]:w-[70%] max-[560px]:w-[90%]")
@@ -12,5 +12,5 @@ section.relative.bg-light3.z-20(class='py-[10rem] ')
       +accrodion(accrodions[2])
       +accrodion(accrodions[3])
 
-  p.mt-24.text-center Can't find an answer? 
+  p.mt-24.text-center(style="z-index:999;") Can't find an answer? 
     a.text-green-500.transition.cursor-pointer( href="" class="hover:text-green-600 duration-[.3s]") Email us

@@ -47,7 +47,7 @@ function handleClickFeature(e) {
   features.forEach((el) => el.classList.remove("active-feature"));
   e.target.closest("li").classList.add("active-feature");
   const featuresInfo = document.querySelectorAll(".feature-info");
-  const featureInfo = [...featuresInfo].find(
+  const featureInfo = featuresInfo.find(
     (el) => el.dataset.index === e.target.closest("li").dataset.index
   );
   featuresInfo.forEach((el) => el.classList.add("hidden"));
@@ -102,3 +102,23 @@ function activeCircle() {
       : el.classList.remove("active-testimonials-circle")
   );
 }
+
+////////////////////////////////////
+// FAQ Section
+
+const faqAccrodions = document.querySelectorAll(".faq-accrodion");
+
+
+faqAccrodions.forEach((accrodion) => {
+  accrodion
+  .querySelector("summary")
+  .addEventListener("click", handleClickSummary);
+});
+
+function handleClickSummary ()  {
+  accrodion.querySelectorAll(".accrodion-icon").forEach((icon) => {
+    [...icon.classList].includes("hidden")
+      ? icon.classList.remove("hidden")
+      : icon.classList.add("hidden");
+  });
+};
