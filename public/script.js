@@ -19,10 +19,12 @@ function handleNavbarItemMouseEnter(e) {
   const targetClassList = e.target
     .closest("li")
     .querySelector(".droplist").classList;
-  targetClassList.add("opacity-100");
-  targetClassList.add("visible");
-  targetClassList.remove("invisible");
-  targetClassList.remove("opacity-0");
+    console.log(targetClassList)
+    targetClassList.add("opacity-100");
+    targetClassList.add("visible");
+    targetClassList.remove("invisible");
+    targetClassList.remove("opacity-0");
+    console.log(targetClassList)
 }
 
 function handleNavbarItemMouseLeave(e) {

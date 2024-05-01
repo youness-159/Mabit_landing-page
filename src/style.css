@@ -19,11 +19,10 @@ body {
   @apply bg-white-cold;
 }
 
-body > * {
+body > *:not(:first-child) {
   width: 100vw;
   overflow: hidden;
 }
-
 
 /* 
 #b34f4a

@@ -34,6 +34,7 @@ module.exports = {
         "red-transparent1": "#FE3E6633",
         "green-500-transparent1": "#4AAFB34d",
         "green-500-transparent2": "#4AAFB30d",
+        "black-transparent2": "#0000000d",
         "red-transparent2": "#FE3E664d",
         "red-transparent3": "#FE3E660d",
       },
