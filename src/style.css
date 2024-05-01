@@ -90,3 +90,9 @@ summary {
 details[open] {
   transition: 3s;
 }
+
+@media screen and (width<488px) {
+  html {
+    font-size: 50%;
+  }
+}
