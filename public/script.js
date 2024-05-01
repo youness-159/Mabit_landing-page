@@ -19,12 +19,10 @@ function handleNavbarItemMouseEnter(e) {
   const targetClassList = e.target
     .closest("li")
     .querySelector(".droplist").classList;
-    console.log(targetClassList)
-    targetClassList.add("opacity-100");
-    targetClassList.add("visible");
-    targetClassList.remove("invisible");
-    targetClassList.remove("opacity-0");
-    console.log(targetClassList)
+  targetClassList.add("opacity-100");
+  targetClassList.add("visible");
+  targetClassList.remove("invisible");
+  targetClassList.remove("opacity-0");
 }
 
 function handleNavbarItemMouseLeave(e) {
@@ -110,17 +108,17 @@ function activeCircle() {
 
 const faqAccrodions = document.querySelectorAll(".faq-accrodion");
 
-
 faqAccrodions.forEach((accrodion) => {
   accrodion
-  .querySelector("summary")
-  .addEventListener("click", handleClickSummary);
+    .querySelector("summary")
+    .addEventListener("click", handleClickSummary(accrodion));
 });
 
-function handleClickSummary ()  {
-  accrodion.querySelectorAll(".accrodion-icon").forEach((icon) => {
-    [...icon.classList].includes("hidden")
-      ? icon.classList.remove("hidden")
-      : icon.classList.add("hidden");
-  });
-};
+function handleClickSummary(accrodion) {
+  return () =>
+    accrodion.querySelectorAll(".accrodion-icon").forEach((icon) => {
+      [...icon.classList].includes("hidden")
+        ? icon.classList.remove("hidden")
+        : icon.classList.add("hidden");
+    });
+}
