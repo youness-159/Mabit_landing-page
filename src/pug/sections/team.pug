@@ -1,12 +1,12 @@
 section.team.flex.flex-col.items-center(class=' pb-[9rem] mx-auto w-[80vw]')
   include ../components/sectionHeader
   +sectionHeader({title:"Meet our Team Members",paragraph:"Different layouts and styles for team sections."})
-  ul.members.flex.justify-center(class='gap-[3vw] max-[1017px]:flex-wrap ')
+  ul.members.flex.justify-center(class='gap-[3vw] max-[1017px]:flex-wrap max-[1017px]:gap-[7vw] ')
     - const  team=[  {image:"imgs/team/team-1.jpg",name:"Benjamin Evalent",role:"CEO-Founder"},  {image:"imgs/team/team-2.jpg",name:"Benjamin Evalent",role:"CEO-Founder"},  {image:"imgs/team/team-3.jpg",name:"Benjamin Evalent",role:"CEO-Founder"},  {image:"imgs/team/team-4.jpg",name:"Benjamin Evalent",role:"CEO-Founder"}]
     each member in team 
       li.text-center
         img(src=member.image alt='mabit member' class="max-[1017px]:max-w-[32rem]")
-        p.text-lg(class='mt-[2.4rem] mb-[1.2rem]') #{member.name}
+        p.text-lg(class='mt-[2.4rem] max-[1017px]:mb-[.5rem] max-[1017px]:mt-[1.6rem] mb-[1.2rem]') #{member.name}
         span.text-base.text-dark3 #{member.role}
 
   button.border-2.text-dark5.mt-24.rounded-md.px-12.py-4.text-base.font-semibold.text-dark2.transition(class='mt-[4.4rem]' class='duration-[.3s] hover:border-transparent hover:bg-green-500 hover:text-light1')
