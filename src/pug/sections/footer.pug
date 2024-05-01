@@ -12,8 +12,9 @@ footer.bg-light3(class='pt-[5rem] pb-[6rem]')
       ul.flex.gap-3.mt-5
         -const socialMedia=["fa-brands fa-facebook-f","fa-brands fa-x-twitter","fa-brands fa-pinterest-p","fa-brands fa-linkedin-in"]
         each logo in socialMedia
-          li.bg-white.text-dark2.rounded-lg.flex.items-center.justify-center(class='w-[3.2rem] h-[3.2rem]')
-            i(class=logo)
+          li.bg-white.text-dark2.rounded-lg.flex.items-center.justify-center.transition.cursor-pointer(class='w-[3.2rem] h-[3.2rem] hover:bg-green-500 hover:text-white duration-[.3s]')
+            a(href="")
+              i(class=logo)
 
     - const fields = [{ title: "Company", subTitles: ["About Us", "Service", "Case Studies", "Blog", "Contact"] },{ title: "Support", subTitles: ["Community", "Resources", "Faqs", "Privacy Policy", "Careers"] },{ title: "Get In Touch", subTitles: ["support@Mabit.com", "+(212) 614 466 016 ", "Faqs", "442 Belle Terre St Floor 7, San Francisco, AV 4206"] }];
     include ../components/footerField
