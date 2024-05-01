@@ -3,9 +3,9 @@ mixin price(data,i)
     li.bg-white.rounded-xl.transition.shrink-0(class='p-[4rem] w-[36rem]  hover:shadow-2xl hover:shadow-red-transparent3 duration-[.3s]')
       label.text-2xl.font-semibold(class='mb-[2rem]') #{data.label}
       p(class='mb-[1rem]')
-        span.align-text-top $
+        sup.text-2xl.mr-2.mt-2.text-dark2 $
         strong.text-4xl.font-bold #{data.price}
-        span /month
+        span &nbsp;/month
       span.text-base #{data.paragraph}
       .line.bg-dark1(class='mt-[2.5rem] w-[80%] h-[1px]')
       ul.features.flex.flex-col.gap-3(class='mt-[2.5rem]')
@@ -20,9 +20,9 @@ mixin price(data,i)
     li.bg-white.rounded-xl.transition.shrink-0(class="p-[4rem] w-[36rem] shadow-2xl shadow-red-transparent3 duration-[.3s] after:content-['Most_Popular'] after:z-50  after:px-[1.2rem] after:py-[.4rem] after:text-nowrap after:text-white after:text-[1.4rem] after:font-semibold after:flex after:items-center after:justify-center after:rounded-full  after:bg-red after:shadow-md after:shadow-red-transparent2  after:absolute relative after:top-0 after:right-16 after:-translate-y-1/2 ")
       label.text-2xl.font-semibold(class='mb-[1.7rem]') #{data.label}
       p(class='mb-[1rem]')
-        span.align-text-top $
+        sup.text-2xl.mr-2.mt-2.text-dark2 $
         strong.text-4xl.font-bold #{data.price}
-        span /month
+        span &nbsp;/month
       span.text-base #{data.paragraph}
       .line.bg-dark1(class='mt-[2.5rem] w-[80%] h-[1px]')
       ul.features.flex.flex-col.gap-3(class='mt-[2.5rem]')
