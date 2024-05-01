@@ -1,5 +1,5 @@
 section.faq.relative.bg-light3(class='py-[10rem] ')
-  img.absolute.bottom-0.right-14(src="imgs/shapes/faq-shape.png" style="z-index:9;")
+  img.absolute.bottom-0.right-14(src="imgs/shapes/faq-shape.png")
   include ../components/sectionHeader
   +sectionHeader({title:"Frequently asked questions",paragraph:"Different layouts and styles for team sections."})
   div.mx-auto.flex.items-baseline.justify-center.mt-16(class=" w-[70vw] max-[1017px]:w-[90vw] gap-[5%] max-[1017px]:gap-0 max-[1017px]:flex-wrap ")
@@ -12,5 +12,5 @@ section.faq.relative.bg-light3(class='py-[10rem] ')
       +accrodion(accrodions[2])
       +accrodion(accrodions[3])
 
-  p.mt-24.text-center(style="z-index:999;") Can't find an answer? 
+  p.mt-24.text-center.relative.z-index-50 Can't find an answer? 
     a.text-green-500.transition.cursor-pointer( href="" class="hover:text-green-600 duration-[.3s]") Email us

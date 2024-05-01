@@ -38,10 +38,6 @@ body > *:not(:first-child) {
   background: linear-gradient(135deg, #c2726e 0%, #8f3f3b 100%);
 }
 
-br {
-  /* color: #4a8bb3; */
-  color: #b14ab3;
-}
 
 .service-icon-3 {
   background: linear-gradient(135deg, #6ebfc2 0%, #3b8c8f 100%);
