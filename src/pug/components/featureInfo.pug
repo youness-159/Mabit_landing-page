@@ -3,7 +3,7 @@ mixin featureInfo(data,i)
     .feature-info.flex.items-center(class='gap-[7vw] max-[727px]:flex-col ' data-index=i )
       div
         img(src=data.image class='w-[41rem]  min-w-[32rem] translate-x-[10%]' alt='feature image')
-      .feature-text
+      .feature-text(class="max-[621px]:w-[85vw]")
         p.text-sm.font-semibold.text-green-500 Custom Reacyions
         h2.text-wrap.text-5xl.font-black(class='mb-[2.2rem] mt-[1rem] leading-[6rem]')
           | #{data.title}
@@ -17,7 +17,7 @@ mixin featureInfo(data,i)
     .feature-info.flex.items-center.hidden(class='gap-[7vw] max-[727px]:flex-col' data-index=i)
       div
         img(src=data.image class='w-[41rem] min-w-[32rem] translate-x-[10%]' alt='feature image')
-      .feature-text
+      .feature-text(class="max-[621px]:w-[85vw]")
         p.text-sm.font-semibold.text-green-500 Custom Reacyions
         h2.text-wrap.text-5xl.font-black(class='mb-[2.2rem] mt-[1rem] leading-[6rem]')
           | #{data.title}
