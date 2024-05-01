@@ -6,13 +6,13 @@ section.traffic-section.flex.bg-orange(class='gap-[10vw] py-[10rem] pl-[8vw] max
     h3.text-wrap.text-lg.text-dark5.font-light
       | He nicked it tickety boo harry the cras bargy chap mush spiffing spend
       | a penny the full monty burke butty.
-    ul.traffics.mx-auto.mt-24.grid.grid-cols-2(class='gap-[4vw] max-[656px]:grid-cols-1 max-[656px]:ml-4')
+    ul.traffics.mx-auto.mt-24.grid.grid-cols-2(class='gap-[6vw] max-[656px]:grid-cols-1 max-[656px]:ml-4')
       - const traffics=[ {title:"Carefully designed",paragraph:"Mucker plastered bugger all mate morish are.",class:"text-blue-500"}, {title:"Carefully designed",paragraph:"Mucker plastered bugger all mate morish are.",class:"text-orange-500"}, {title:"Carefully designed",paragraph:"Mucker plastered bugger all mate morish are.",class:"text-green-500"}, {title:"Carefully designed",paragraph:"Mucker plastered bugger all mate morish are.",class:"text-purple-500"}]
       include ../components/traffic
       each traffic in traffics
         +traffic(traffic)
 
-    button.mt-14.rounded-md.border-2.w-fit.px-5.py-3.text-base.font-semibold.text-dark2.transition(class='duration-[.3s] hover:border-transparent hover:bg-green-500 hover:text-light1 max-[1017px]:self-center')
+    button.mt-24.rounded-md.border-2.w-fit.px-5.py-3.text-base.font-semibold.text-dark2.transition(class='duration-[.3s] hover:border-transparent hover:bg-green-500 hover:text-light1 max-[1017px]:self-center')
       span
         | Learn More 
         i.fa.fa-arrow-right(class='ml-[1rem]')
