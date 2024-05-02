@@ -1,12 +1,13 @@
 mixin accrodion(data)
     details.faq-accrodion.relative.bg-white.transition.rounded-lg(class=" shrink-0 mb-[3%] duration-[3s]")
-        summary.font-semibold.cursor-pointer.text-nowrap.w-fit(class="py-[1.8rem] px-[3.5rem]")
+        summary.font-semibold.flex.items-center.justify-between.gap-4.cursor-pointer.text-nowrap.w-full(class="py-[1.8rem] px-[3.5rem] max-[401px]:px-[3vw] ")
             span 
                 | #{data.question}
-            span.accrodion-icon.rounded-full.absolute.-right-5(class="w-[6.8rem] h-[6.8rem] ")
-                i(class="fa  fa-chevron-down text-green-500")
-            span.accrodion-icon.hidden.rounded-full.absolute.-right-5(class="w-[6.8rem] h-[6.8rem] ")
-                i(class="fa  fa-chevron-up  text-green-500")
+            div    
+                span.accrodion-icon.flex.items-center.text-center.justify-center.rounded-full(class="w-[2.4rem] h-[2.4rem] ")
+                    i(class="fa  fa-chevron-down text-green-500")
+                span.accrodion-icon.flex.items-center.text-center.justify-center.hidden.rounded-full(class="w-[2.4rem] h-[2.4rem] ")
+                    i(class="fa  fa-chevron-up  text-green-500")
 
         p(class="pb-[1.8rem] px-[3.5rem]")
             | #{data.answer}
