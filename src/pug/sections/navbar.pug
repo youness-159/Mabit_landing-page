@@ -1,20 +1,31 @@
 nav.navbar.fixed.w-full.bg-white-cold.pb-5.pt-9.text-nowrap(class="z-[9999] max-[620px]:p-10 ")
+  - const navbarItems=["Services","Features","Traffics","Testimonials","Team","Pricing","FAQ"]
   .flex.justify-between(class="mx-[5vw]")
     .flex(class="gap-[4vw]")
       span.font-semibold.text-2xl.text-green-500.tracking-wide
         |  Mabit
-      ul.navbar-list.flex.gap-16.font-semibold.text-dark2(class="max-[968px]:hidden")
-        - const navbarItems=["Home","Mega Menu","Pages","Shop","News"]
+      ul.navbar-list.flex.gap-14.font-semibold.text-dark2(class="max-[1064px]:hidden")
         each item in navbarItems
-          li.navbar-item.flex.items-center.relative
-            .navbar-item__header.flex.gap-5.items-center.cursor-pointer  
+          li.navbar-item.flex.items-center.relative.transition(class="hover:text-green-500 duration-[.3s] after:content-[''] after:w-O hover:after:animate-width-from-0-to-full  after:h-[2.5px]  after:bg-green-500 after:absolute after:bottom-2 after:rounded-full after:left-0")
+            a.navbar-item__header.flex.gap-5.items-center.cursor-pointer(href=`#${item.toLowerCase().split(" ").join("-")}`)  
               | #{item}
-              i.fa.fa-angle-down.ml-1
-            include ../components/droplist
     .flex.gap-10.items-center
       button.space-x-4
         i.fa-regular.fa-user.text-dark5
         span.text-dark5 Login
-      button.text-green-500.transition(class="hover:text-green-600 duration-[.3s]") Get Started
-      button.scale-125(class="h-fit min-[968px]:hidden")
-        i.fa.fa-bars
+      a.text-green-500.transition(class="hover:text-green-600 duration-[.3s]" href="#cta") Get Started
+
+      //- sidebar that showed when navbar-bars label below that  clicked
+      input.z-50(type="checkbox" id="sidebar-checkbox" hidden class="sidebar-checkbox")
+      div.hidden.sidebar-list(class="absolute left-0 top-0 w-[100vw] h-[100dvh] bg-white-cold")
+        ul.absolute.text-center.space-y-6.p-14(class="left-1/2 w-3/4  top-1/2 -translate-y-1/2 -translate-x-1/2  ")
+          each item in navbarItems
+            li.sidebar-item
+              a.inline-block.font-medium.w-full.py-2.px-6.border-2.border-green-500.rounded-xl.transition(class="hover:bg-green-500 duration-[.3s] hover:text-white-cold" onclick="uncheckedSideBarCheckBox()" href=`#${item.toLowerCase().split(" ").join("-")}`)
+                | #{item}
+
+      label.navbar-bars.scale-125.cursor-pointer.relative.z-50(class="h-[1.1rem]   w-[1.8rem]  min-[1064px]:hidden" for="sidebar-checkbox")
+        .navbar-bar
+        .navbar-bar
+        .navbar-bar
+

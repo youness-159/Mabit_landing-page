@@ -35,6 +35,13 @@ function handleNavbarItemMouseLeave(e) {
   targetDroplistClassList.remove("opacity-100");
 }
 
+
+function uncheckedSideBarCheckBox(){
+
+  const checkbox=document.querySelector(".sidebar-checkbox")
+  checkbox.checked=false
+  
+}
 ////////////////////////////////////
 // Features Section
 const features = document.querySelectorAll(".feature");

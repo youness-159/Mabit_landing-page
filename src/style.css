@@ -11,6 +11,7 @@
 html {
   font-family: "Lato", sans-serif;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -37,7 +38,6 @@ body > *:not(:first-child) {
 .service-icon-2 {
   background: linear-gradient(135deg, #c2726e 0%, #8f3f3b 100%);
 }
-
 
 .service-icon-3 {
   background: linear-gradient(135deg, #6ebfc2 0%, #3b8c8f 100%);
@@ -90,5 +90,65 @@ details[open] {
 @media screen and (width<488px) {
   html {
     font-size: 50%;
+  }
+}
+
+@keyframes width-from-0-to-full {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.sidebar-checkbox:checked + .sidebar-list {
+  display: block;
+}
+
+.navbar-bar {
+  @apply bg-gray-500 absolute -translate-y-1/2 rounded-full  left-0 w-full h-[1.5px];
+}
+
+.navbar-bar:first-child {
+  top: 0;
+}
+.navbar-bar:nth-child(2) {
+  top: 50%;
+}
+.navbar-bar:last-child {
+  top: 100%;
+}
+
+.sidebar-checkbox:checked ~ .navbar-bars .navbar-bar:first-child {
+  animation: rotateBarRight 0.3s forwards;
+  transform-origin: center;
+  top: 50%;
+}
+.sidebar-checkbox:checked ~ .navbar-bars .navbar-bar:last-child {
+  animation: rotateBarLeft 0.3s forwards;
+  top: 50%;
+  transform-origin: center;
+}
+
+.sidebar-checkbox:checked ~ .navbar-bars .navbar-bar:nth-child(2) {
+  display: none;
+}
+
+@keyframes rotateBarRight {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes rotateBarLeft {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-45deg);
   }
 }

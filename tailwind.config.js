@@ -57,6 +57,9 @@ module.exports = {
         "3xl": "0 30px 70px 0 ",
         "2xl": "0px 40px 40px 0px",
       },
+      animation:{
+        "width-from-0-to-full":"width-from-0-to-full .3s linear forwards"
+      }
     },
   },
   plugins: ["prettier-plugin-tailwindcss"],
