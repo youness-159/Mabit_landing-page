@@ -1,7 +1,7 @@
 section#testimonials.relative(class='my-[10rem] py-[8rem]')
   .testimonials.relative.flex.justify-center.items-center.gap-10.text-white(class='pt-[10rem] pb-[16rem]')
     img.absolute.-z-50(src='imgs/testimonial-bg.png' alt='testimonials section background' class=" w-full h-full top-1/2 -translate-y-1/2  ")
-    button.testimonials-slide-left-arrow
+    button.testimonials-slide-left-arrow(aria-label="testimonials slide left button")
       i.fa.fa-arrow-left.text-white-80.transition(class="hover:text-white duration-[.3s] scale-[2]")
     - const testimonials=[{image:'imgs/testimonials/testimonial-user.png',username:"Jason Respons",date:"April 14, 2022",comment:"Why I say old chap that is spiffing lurgy Oxford cracking goal bleeder, bog-standard Harry brilliant mush a blinding shot starkers.",starsNumber:5},{image:'imgs/testimonials/testimonial-user.png',username:"Jason Response",date:"April 14, 2022",comment:"Why I say old chap that is spiffing lurgy Oxford cracking goal bleeder, bog-standard Harry brilliant mush a blinding shot starkers.",starsNumber:5},{image:'imgs/testimonials/testimonial-user.png',username:"Jason Respons",date:"April 14, 2022",comment:"Why I say old chap that is spiffing lurgy Oxford cracking goal bleeder, bog-standard Harry brilliant mush a blinding shot starkers.",starsNumber:5}]
     div.relative
@@ -13,5 +13,5 @@ section#testimonials.relative(class='my-[10rem] py-[8rem]')
         .circles.flex.gap-3.absolute.bottom-0(class='left-1/2 -translate-x-1/2 translate-y-[200%]')
           each _ in testimonials
             .circle.w-4.h-4.rounded-full.bg-white-80
-    button.testimonials-slide-right-arrow
+    button.testimonials-slide-right-arrow(aria-label="testimonials slide left button")
       i.fa.fa-arrow-right.text-white-80.transition(class="hover:text-white duration-[.3s] scale-[2]")

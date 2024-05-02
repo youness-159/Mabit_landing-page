@@ -13,7 +13,7 @@ nav.navbar.fixed.w-full.bg-white-cold.pb-5.pt-9.text-nowrap(class="z-[9999] max-
       button.space-x-4
         i.fa-regular.fa-user.text-dark5
         span.text-dark5 Login
-      a.text-green-500.transition(class="hover:text-green-600 duration-[.3s]" href="#cta") Get Started
+      a.text-green-500.transition(class="hover:text-green-600 duration-[.3s]" href="#cta" ) Get Started
 
       //- sidebar that showed when navbar-bars label below that  clicked
       input.z-50(type="checkbox" id="sidebar-checkbox" hidden class="sidebar-checkbox")
@@ -21,7 +21,7 @@ nav.navbar.fixed.w-full.bg-white-cold.pb-5.pt-9.text-nowrap(class="z-[9999] max-
         ul.absolute.text-center.space-y-6.p-14(class="left-1/2 w-3/4  top-1/2 -translate-y-1/2 -translate-x-1/2  ")
           each item in navbarItems
             li.sidebar-item
-              a.inline-block.font-medium.w-full.py-2.px-6.border-2.border-green-500.rounded-xl.transition(class="hover:bg-green-500 duration-[.3s] hover:text-white-cold" onclick="uncheckedSideBarCheckBox()" href=`#${item.toLowerCase().split(" ").join("-")}`)
+              a.inline-block.font-medium.w-full.py-2.px-6.border-2.border-green-500.rounded-xl.transition(class="hover:bg-green-500 duration-[.3s] hover:text-white-cold"  onclick="uncheckedSideBarCheckBox()" href=`#${item.toLowerCase().split(" ").join("-")}`)
                 | #{item}
 
       label.navbar-bars.scale-125.cursor-pointer.relative.z-50(class="h-[1.1rem]   w-[1.8rem]  min-[1064px]:hidden" for="sidebar-checkbox")
