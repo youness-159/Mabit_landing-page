@@ -11,7 +11,7 @@ mixin price(data,i)
       ul.features.flex.flex-col.gap-3(class='mt-[2.5rem]')
         each feature in data.features
           li.flex.gap-3
-            span.text-dark2.rounded-full.text-center(class='w-[1.6rem] h-[1.6rem]')
+            span.rounded-full.text-center(class='w-[1.6rem] h-[1.6rem]')
               i.fa.fa-check
             span #{feature}
       button.text-sm.font-semibold.text-dark5.rounded-xl.transition(class='border-[.2rem] mt-[2.8rem] px-[2rem] py-[.9rem] hover:bg-red hover:text-white hover:border-transparent duration-[.3s]')
@@ -28,7 +28,7 @@ mixin price(data,i)
       ul.features.flex.flex-col.gap-3(class='mt-[2.5rem]')
         each feature in data.features
           li.flex.gap-3
-            span.text-dark2.rounded-full.text-center(class='w-[1.6rem] h-[1.6rem]')
+            span.text-red.text-dark2.rounded-full.text-center(class='w-[1.6rem] h-[1.6rem]')
               i.fa.fa-check
             span #{feature}
       button.text-sm.font-semibold.rounded-xl(class='border-[.2rem] mt-[2.8rem] px-[2rem] py-[.9rem] bg-red text-white border-transparent')
