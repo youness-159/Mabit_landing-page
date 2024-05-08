@@ -1,41 +1,6 @@
 ////////////////////////////////////
 // Navbar
 
-const navbarList = document.querySelector(".navbar-list");
-const navbarListItems = navbarList.children;
-
-[...navbarListItems].forEach((el) => {
-  el.addEventListener("mouseenter", handleNavbarItemMouseEnter);
-  el.addEventListener("mouseleave", handleNavbarItemMouseLeave);
-});
-
-function handleNavbarItemMouseEnter(e) {
-  navbarList.querySelectorAll(".droplist").forEach((el) => {
-    el.classList.add("invisible");
-    el.classList.add("opacity-0");
-    el.classList.remove("visible");
-    el.classList.remove("opacity-100");
-  });
-  const targetClassList = e.target
-    .closest("li")
-    .querySelector(".droplist").classList;
-  targetClassList.add("opacity-100");
-  targetClassList.add("visible");
-  targetClassList.remove("invisible");
-  targetClassList.remove("opacity-0");
-}
-
-function handleNavbarItemMouseLeave(e) {
-  const targetDroplistClassList = e.target
-    .closest("li")
-    .querySelector(".droplist").classList;
-  targetDroplistClassList.add("invisible");
-  targetDroplistClassList.add("opacity-0");
-  targetDroplistClassList.remove("visible");
-  targetDroplistClassList.remove("opacity-100");
-}
-
-
 function uncheckedSideBarCheckBox(){
 
   const checkbox=document.querySelector(".sidebar-checkbox")
@@ -54,9 +19,10 @@ function handleClickFeature(e) {
   features.forEach((el) => el.classList.remove("active-feature"));
   e.target.closest("li").classList.add("active-feature");
   const featuresInfo = document.querySelectorAll(".feature-info");
-  const featureInfo = featuresInfo.find(
+  const featureInfo = Array.from(featuresInfo).find(
     (el) => el.dataset.index === e.target.closest("li").dataset.index
   );
+  console.log(featureInfo)
   featuresInfo.forEach((el) => el.classList.add("hidden"));
   featureInfo.classList.remove("hidden");
 }

@@ -2,12 +2,11 @@ section#traffics.flex.bg-orange(class='gap-[10vw] py-[10rem] pl-[8vw] max-[1017p
   .traffic-text.flex.flex-col(class="max-[1017px]:w-[70%] max-[1017px]:mx-auto")
     p.text-sm.font-semibold.text-green-500 Traffic
     h2.text-wrap.text-4xl.font-black(class='mb-[1rem] mt-[1rem] leading-[6rem]')
-      | Stage reporting with 50k queries.
+      | Unlock the Power of Habits with Mabit
     h3.text-wrap.text-lg.text-dark5.font-light
-      | He nicked it tickety boo harry the cras bargy chap mush spiffing spend
-      | a penny the full monty burke butty.
+      | Identify and replace negative habits with positive alternatives.
     ul.traffics.mx-auto.mt-24.grid.grid-cols-2(class='gap-[6vw] max-[656px]:grid-cols-1 max-[656px]:ml-4')
-      - const traffics=[ {title:"Carefully designed",paragraph:"Mucker plastered bugger all mate morish are.",class:"text-blue-500"}, {title:"Carefully designed",paragraph:"Mucker plastered bugger all mate morish are.",class:"text-orange-500"}, {title:"Carefully designed",paragraph:"Mucker plastered bugger all mate morish are.",class:"text-green-500"}, {title:"Carefully designed",paragraph:"Mucker plastered bugger all mate morish are.",class:"text-purple-500"}]
+      - const traffics=[ {title:"Build Self-Discipline",paragraph:"Cultivate self-discipline through consistent habit building.",class:"text-blue-500"}, {title:"Break Bad Habits",paragraph:"Overcome negative habits and replace them with positive ones.",class:"text-orange-500"}, {title:"Sharpen Focus",paragraph:"Automate positive habits to minimize distractions and boost productivity.",class:"text-green-500"}, {title:"Stronger Relationships",paragraph:"Build habits that nurture connections with loved ones, like expressing gratitude.",class:"text-purple-500"}]
       include ../components/traffic
       each traffic in traffics
         +traffic(traffic)
